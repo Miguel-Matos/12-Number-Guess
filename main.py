@@ -1,9 +1,6 @@
 import art
 import random
 
-
-
-
 def game():
     print(art.logo)
     answer = random.randint(1,100)
