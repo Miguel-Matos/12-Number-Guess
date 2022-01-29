@@ -1,21 +1,25 @@
 import art
 import random
-print(art.logo)
 
-answer = random.randint(1,100)
 
-lives_hard = 5
-lives_easy = 10
-difficulty_mode = input("Choose easy or hard: ").lower()
 
-def guessing_game(lives):
-    if difficulty_mode == "easy":
-        lives = lives_easy
-    else:
-        lives = lives_hard
-    return lives
 
 def game():
+    print(art.logo)
+    answer = random.randint(1,100)
+
+    lives_hard = 5
+    lives_easy = 10
+    difficulty_mode = input("Choose easy or hard: ").lower()
+
+    def guessing_game(lives):
+        if difficulty_mode == "easy":
+            lives = lives_easy
+        else:
+            lives = lives_hard
+        return lives
+
+   
     game_lives = guessing_game(difficulty_mode)
     is_alive = True
     while is_alive:
